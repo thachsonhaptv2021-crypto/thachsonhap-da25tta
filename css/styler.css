@@ -1,1 +1,61 @@
 /*thông tin ca nhân*/
+body {
+      background: linear-gradient(to right, #103667, #3a3a5f);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+    }
+
+    .container {
+      margin-top: 50px;
+    }
+table{
+		background: linear-gradient(to right,#1B4F93);
+		border-radius: 15px;
+		border-collapse: collapse;
+  		margin: 10px auto; 
+  		width: 80%;
+}	
+
+	td {
+	font-size:18pt;
+  	padding: 20px ;
+  	vertical-align: middle;
+	text-align:left;
+
+}
+img {
+      width: 300px;
+      height: 350px;
+      border-radius: 85px;
+      border: 4px solid white;
+      object-fit: cover;
+    }
+.box {
+      margin-top: 25px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      display: inline-block;
+      text-align:justify;
+      margin: 10px 20px;
+ }
+h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
+      margin-top: 15px;
+	text-align:center;
+    }
+
+.box2 {
+    	 width: 450px;
+      height: auto;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      display: inline-block;
+      text-align:justify;
+       margin: 10px 20px;
+ }
+   
+    
+     
