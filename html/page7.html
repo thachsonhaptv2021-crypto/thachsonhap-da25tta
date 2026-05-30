@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Bảng hóa đơn</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/styler7.css">
+    </head>
+    <body>
+        <table>
+            <caption><h2>Hóa đơn bán hàng</h2></caption>
+            <tr>
+                <td>STT</td>
+                <td>Tên hàng</td>
+                <td>Số lượng</td>
+                <td>Đơn giá</td>
+                <td>Đơn vị tính</td>
+                <td>Thành tiền</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Mì Colusa</td>
+                <td class="soluong">2</td>
+                <td class="dongia">105</td>
+                <td>Thùng</td>
+                <td class="thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Sữa Ông Thọ</td>
+                <td class="soluong">4</td>
+                <td class="dongia">200</td>
+                <td>Thùng</td>
+                <td class="thanhtien">?</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Xúc xích CP</td>
+                <td class="soluong">120</td>
+                <td class="dongia">45</td>
+                <td>Túi</td>
+                <td class="thanhtien">?</td>
+            </tr>
+            <tr>
+                <td colspan="4" style="text-align: center;">Tổng thanh toán</td>
+                <td id="tongthanhtoan" colspan="2" style="text-align: center;">?</td>
+            </tr>
+            <script>
+                const sl = document.getElementsByClassName("soluong");
+                const dg = document.getElementsByClassName("dongia");
+                const tt = document.getElementsByClassName("thanhtien");
+
+                let tongthanhtoan = 0;
+                for (let i = 0; i < sl.length; i++) {
+                    tt[i].innerHTML = Number(sl[i].innerHTML) * Number(dg[i].innerHTML);
+                    tongthanhtoan += Number(tt[i].innerHTML);
+                }
+                document.getElementById("tongthanhtoan").innerHTML = tongthanhtoan;
+            </script>   
+        </table>
+    </body>
+</html>

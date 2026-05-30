@@ -1,0 +1,32 @@
+body {
+      background: linear-gradient(to right, #103667, #3a3a5f);
+      color: white;
+      font-family: 'Poppins', sans-serif;
+      text-align: center;
+	  font-size:18pt;
+    }
+	
+table{
+		background: linear-gradient(to right,#1B4F93);
+		border-radius: 15px;
+		border-collapse: collapse;
+  		margin: 10px auto; 
+  		width: 80%;
+}	
+td {
+	font-size:18pt;
+  	padding: 20px ;
+  	vertical-align: middle;
+	text-align:left;
+ {
+	  margin-top:25px;
+      padding: 30px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.2);
+      display: inline-block;
+      text-align:justify;
+      margin: 10px 20px;
+ }
+ h2 { 
+	margin-top: 25px;
+}
