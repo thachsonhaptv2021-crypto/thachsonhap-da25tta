@@ -7,17 +7,20 @@
 	font-size: 14pt;
 	line-height:1.5;
 	color:white ;
+	
 }
 div.container {
     margin-top: 50px;
 	padding: 20px ;
 	background: linear-gradient(to right, #103667,#426EB4);
+	
 	}
 #title{
 		text-transform:uppercase;
 		font-size: 20px;
 		letter-spacing: 3px;
 		text-align: center;
+		
 }
 label{
 		display: block;
