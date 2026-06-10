@@ -8,67 +8,17 @@
 
         <!-- Latest compiled JavaScript -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+       <script src = "../js/lib.js"></script>
     </head>
     <body>
-        <div class="container bg-primary">
+        <div class="container ">
             <div id="product-list" class="row "></div>
+
         </div>
-
+         
         <script>
-            //  iết đúng id "product-list" (có chữ t)
-            const listProducts = document.getElementById("product-list"); 
-
-            // Tạo 1 container có class = "item"
-            const item = document.createElement("div"); 
-            item.setAttribute("class", "item"); 
-
-            //Tạo container chứa hình ảnh (khung div) có class="image"
-            const containerImage = document.createElement("div");
-            containerImage.setAttribute("class", "image");
-
-            // Tạo thẻ img riêng biệt
-            const img = document.createElement("img");
-            img.setAttribute("src", "../assets/images/quat.jpg");
-            img.setAttribute("alt", "Quạt mini");
-            img.setAttribute("style", "width:100%; max-width:150px; border-radius: 85px;");
-
-            // Đưa thẻ ảnh vào khung chứa ảnh
-            containerImage.appendChild(img);
-
-            // Tạo container chứa thông tin sản phẩm có class = "info"
-            const containerInfo = document.createElement("div"); 
-            containerInfo.setAttribute("class", "info");  
-
-            // Tạo <p> chứa tên sản phẩm
-            const nameProduct = document.createElement("p");
-            nameProduct.innerHTML = "Quạt mini cầm tay";
-            
-            // Tạo <p> chứa giá sản phẩm
-            const price = document.createElement("p");
-            price.innerHTML = "250k";
-
-            // Tạo <p> chứa mô tả sản phẩm
-            const description = document.createElement("p");
-            description.innerHTML = "Quạt mini cầm tay N68 Pin Trâu di động có thể sạc gió mạnh.100 tốc độ turbo phản lực màn hình hiển thị pin";
-
-            // Tạo liên kết <a>
-            const linkProduct = document.createElement("a");
-            linkProduct.innerHTML = "Xem chi tiết";
-            linkProduct.setAttribute("href", "page6.html"); 
-            linkProduct.setAttribute("class","bg-info")
-
-            // Gán 4 thành phần con vào khung chứa info
-            containerInfo.appendChild(nameProduct);
-            containerInfo.appendChild(price);
-            containerInfo.appendChild(description);
-            containerInfo.appendChild(linkProduct);
-
-            // Thêm khung chứa image và khung chứa info vào item chính
-            item.appendChild(containerImage);
-            item.appendChild(containerInfo);
-
-            // Thêm item hoàn chỉnh vào list product ngoài giao diện
-            listProducts.appendChild(item);
+            loadAllProducts(product);
         </script>
     </body>
 </html>

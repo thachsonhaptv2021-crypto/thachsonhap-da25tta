@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="vi">
+	<head>
+		<title>THÔNG TIN CA NHÂN</title>
+		<meta charset="utf-8">
+		<link rel = "stylesheet" href ="../css/styler2.css">
+        <script src = "../js/lib.js"></script>
+	</head>
+	<body>
+		<div class = "container" id = "container">
+
+            <img src = "" alt ="" id = " image">
+            <p id = "name"></p>
+            <p id = "price"></p>
+            <p id = "description"></p>
+        </div>
+        <script>
+            //1. lấy ID từ URL
+            const urlParams = new URLSearchParams(window.clocation.search);
+            const productId = urlParams.get('masp');
+
+            // 2. Tìm sản phẩm trong mảng dựa vào ID vừa lấy
+            const foundProduct = product.find(obj => obj.id === product);
+
+            // 3. Hiển thị dữ liệu ra giao diện
+            if (foundProduct){
+
+                // Gỉa sử trong file chi-tiet.html đã có sẳn cá thẻ id tương ứng
+                document.getElementById('name').innerText = foundProduct.name;
+                document.getElementById('price').innerText = foundProduct.price + "+000 Đồng";
+                document.getElementById('description').innerText = foundProduct.description;
+                document.getElementById('image').src = foundProduct.image;
+                document.getElementById('image').alt = foundProduct.name;
+            } else {
+                //Trường hợp URL sai hoặc khoog tìm thấy ID phù hợp
+                document.getElementById("container").innerText = `<h2> Sản phẩm kgoong tồn tại hoặc bị xóa!<2><a href= "../index.html">Quay lại <a>`;
+
+                }
+
+
+
+        </script>
+	</body>
+	
+</html>
