@@ -8,6 +8,7 @@ const product = [
     description:"Quạt mini cầm tay N68 Pin Trâu di động có thể sạc gió mạnh.100 tốc độ turbo phản lực màn hình hiển thị pin",
     image:"../assets/images/quat.jpg",
     link:"chi-tiet.html"
+
 },
 {
     id: "2",
@@ -80,8 +81,8 @@ function createTtem(obj)
             // Tạo liên kết <a>
             const linkProduct = document.createElement("a");
             linkProduct.innerHTML = "Xem chi tiết";
-            linkProduct.setAttribute("href", obj.link +"?id" + obj.id); 
-            linkProduct.setAttribute("class","btn btn-primary text-white")
+            linkProduct.setAttribute("href", `chi-tiet.html?masp=${obj.id}`);
+            linkProduct.setAttribute("class","btn btn-primary text-white");
 
             // Gán 4 thành phần con vào khung chứa info
             containerInfo.appendChild(nameProduct);

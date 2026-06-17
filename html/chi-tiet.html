@@ -3,43 +3,48 @@
 	<head>
 		<title>THÔNG TIN CA NHÂN</title>
 		<meta charset="utf-8">
-		<link rel = "stylesheet" href ="../css/styler2.css">
-        <script src = "../js/lib.js"></script>
+		<link rel = "stylesheet" href ="../css/stylerchitiet.css">
 	</head>
 	<body>
-		<div class = "container" id = "container">
+		<div class = "container" id = "container" >
+            <a href="page8.html" class="btn-back" style="left: -10% ">Quay lai  </a>
 
-            <img src = "" alt ="" id = " image">
+            <img src="" alt="" id="image" style="width: 300px; display: block ; border-radius: 20px ;">
             <p id = "name"></p>
             <p id = "price"></p>
             <p id = "description"></p>
         </div>
+
+
+
+        <script src = "../js/lib.js"></script>
         <script>
+
+          
             //1. lấy ID từ URL
-            const urlParams = new URLSearchParams(window.clocation.search);
+            const urlParams = new URLSearchParams(window.location.search);
             const productId = urlParams.get('masp');
 
             // 2. Tìm sản phẩm trong mảng dựa vào ID vừa lấy
-            const foundProduct = product.find(obj => obj.id === product);
+            const foundProduct = product.find(obj => obj.id === productId);
 
             // 3. Hiển thị dữ liệu ra giao diện
             if (foundProduct){
 
                 // Gỉa sử trong file chi-tiet.html đã có sẳn cá thẻ id tương ứng
                 document.getElementById('name').innerText = foundProduct.name;
-                document.getElementById('price').innerText = foundProduct.price + "+000 Đồng";
+               document.getElementById('price').innerText = foundProduct.price.toLocaleString('vi-VN') + '.000 Đồng';
                 document.getElementById('description').innerText = foundProduct.description;
                 document.getElementById('image').src = foundProduct.image;
                 document.getElementById('image').alt = foundProduct.name;
             } else {
                 //Trường hợp URL sai hoặc khoog tìm thấy ID phù hợp
-                document.getElementById("container").innerText = `<h2> Sản phẩm kgoong tồn tại hoặc bị xóa!<2><a href= "../index.html">Quay lại <a>`;
-
-                }
-
-
+                document.getElementById("container").innerHTML =`<h2>Sản phẩm không tồn tại hoặc đã bị xóa!</h2><a href="../html/page8.html">Quay lại</a>`;
+                
+            }
 
         </script>
+        
 	</body>
 	
 </html>

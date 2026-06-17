@@ -30,3 +30,14 @@ td {
  h2 { 
 	margin-top: 25px;
 }
+.trangchu{
+ display: inline-block ;
+ padding: 10px 20px;
+ background-color: #4CAF5O;
+ color: white;
+text-decoration: none;
+border-radius: 5px;
+}
+.trangchu{
+	background-color: #45a049;
+}
